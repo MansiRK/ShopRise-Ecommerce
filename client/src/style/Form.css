@@ -1,0 +1,23 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.form-container form {
+    width: 50%;
+}
+
+.form-container form .form-label {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.form-container form .form-control {
+    border-radius: 50px;
+}
+
+.form-container form .form-control:hover {
+    background-color: rgb(143, 143, 207);
+    border: 1px solid blue;
+}

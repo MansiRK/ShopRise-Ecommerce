@@ -1,0 +1,77 @@
+/* Search bar */
+
+.search {
+    align-items: center;
+    justify-content: center;
+    margin: 20px 300px 20px 300px;
+}
+
+.search input {
+    align-items: center;
+    outline: none;
+    /* flex-direction: row; */
+    border: 0.5px solid gray;
+    border-radius: 50px;
+    width: 100%;
+    margin-right: 15px;
+    padding-left: 40px;
+}
+
+.search input::placeholder {
+    text-align: center;
+}
+
+.search button {
+    margin-right: 0;
+    align-items: right;
+    border-radius: 50px;
+    width: 100px;
+}
+
+/* Corousal */
+.home .carousel {
+    height: 50%;
+}
+
+.home .carousel-item img {
+    height: 500px;
+}
+
+.home .carousel-item h4 {
+    color: rgb(244, 230, 230);
+    text-shadow: 2px 2px #3b3f3b;
+    padding-bottom: 4px;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+/* Products */
+
+.products {
+    border-top: 0.5px solid gray;
+    padding: 10px 30px;
+    align-items: center;
+
+}
+
+.card {
+    margin: 10px 35px;
+    width: 18rem;
+    height: 30%;
+    box-shadow: 0 3.8px 3.2px gray;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* .products .card h5 {
+    font-size: 25px;
+    color: rgb(6, 13, 42);
+    text-align: center;
+} */
+
+.card .card-body {
+    height: 180px;
+    margin-bottom: 5px;
+}

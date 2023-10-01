@@ -1,0 +1,30 @@
+.cart {
+    padding: 20px 80px;
+}
+
+.cart .product {
+    padding: 10px 10px;
+
+}
+
+.cart .product .prod-image {
+    margin: 20px 0px;
+    height: 100%;
+}
+
+.cart .product .prod-image img {
+    height: 80%;
+    width: 80%;
+}
+
+.cart .product .prod-detail {
+    margin-top: 20px;
+}
+
+.cart .payment {
+    padding: 10px 10px;
+}
+
+.cart .payment .payment-option {
+    padding-top: 40px;
+}

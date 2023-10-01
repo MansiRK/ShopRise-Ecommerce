@@ -1,0 +1,38 @@
+.navbar {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 10px;
+    box-shadow: 0 8px 6px -6px;
+    border-bottom: 0.5px solid gray !important;
+    padding: 15px 0;
+
+}
+
+.navbar .navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    padding-left: 20px;
+
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    margin: 0px 18px;
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    border-bottom: 2px solid rgb(25, 25, 63);
+    color: rgb(25, 25, 63);
+}
+
+.navbar-nav .nav-link:hover:after {
+    width: 100%;
+}
+
+.active {
+    border-bottom: 2px solid rgb(25, 25, 63);
+    color: rgb(25, 25, 63);
+}

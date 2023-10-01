@@ -1,0 +1,29 @@
+.footer{
+    box-sizing: border-box;
+    background-color: beige;
+    width: 100%;
+    bottom: 0;
+    padding: 15px;
+    box-shadow: 8px 0 -6px 6px;
+    border-top: 0.5px solid gray !important;
+}
+
+.footer h5{
+    margin-top: 10px;
+}
+
+.footer a{
+    text-decoration: none;
+    padding: 10px 20px ;
+    color: black;
+    text-transform: uppercase;
+}
+
+.footer a:hover{
+    border-bottom: 2px solid rgb(25, 25, 63);
+    color: rgb(25, 25, 63);
+}
+
+.footer a:hover:after{
+    width: 100%;
+}
