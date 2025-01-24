@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { MdOutlinePayment } from "react-icons/md";
 
 const Cart = () => {
   const [auth, setAuth] = useAuth();
@@ -173,6 +174,7 @@ const Cart = () => {
                   onClick={handlePayment}
                   disabled={loading || !instance || !auth.user?.address}
                 >
+                  <MdOutlinePayment />
                   {loading ? "Processing..." : "Make payment"}
                 </button>
               </div>

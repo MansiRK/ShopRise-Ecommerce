@@ -1,38 +1,84 @@
 .navbar {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    line-height: 10px;
-    box-shadow: 0 8px 6px -6px;
-    border-bottom: 0.5px solid gray !important;
-    padding: 15px 0;
-
+  width: 100%;
+  top: 0;
+  font-size: 20px;
+  line-height: 10px;
+  box-shadow: 0 8px 6px -6px;
+  border-bottom: 0.5px solid var(--bg-lighter-blue);
+  padding: 15px 0;
+  background-color: var(--bg-lighter-blue);
 }
 
 .navbar .navbar-brand {
-    font-size: 28px;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.5px;
-    padding-left: 20px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  padding-left: 20px;
 }
 
 .navbar-nav .nav-link {
-    font-weight: 600;
-    margin: 0px 18px;
-    text-transform: uppercase;
+  font-weight: 600;
+  margin: 0px 18px;
+  color: var(--text-dark-blue);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar-nav .nav-link:hover {
-    border-bottom: 2px solid rgb(25, 25, 63);
-    color: rgb(25, 25, 63);
+  border-bottom: 2px solid var(--text-dark-blue);
+  color: var(--text-dark-blue);
 }
 
 .navbar-nav .nav-link:hover:after {
-    width: 100%;
+  width: 100%;
 }
 
-.active {
-    border-bottom: 2px solid rgb(25, 25, 63);
-    color: rgb(25, 25, 63);
+.navbar-nav .nav-link {
+  border-bottom: 2px solid transparent;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link.active {
+  border-bottom: 2px solid var(--text-dark-blue);
+  color: var(--text-dark-blue);
+}
+
+.nav-link svg {
+  color: var(--text-dark-blue);
+  font-size: 1.5em;
+  /* Adjust based on your design */
+}
+
+.navbar-expand-lg .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.desktop-menu {
+  display: block;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }

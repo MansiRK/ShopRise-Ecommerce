@@ -6,6 +6,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cartContext";
 import { toast } from "react-hot-toast";
+import { FiShoppingCart } from "react-icons/fi";
 
 const Home = () => {
   const [auth, setAuth] = useAuth();
@@ -33,8 +34,8 @@ const Home = () => {
 
   return (
     <Layout>
-      <div className="container-fluid home">
-        <div className="search-bar">
+      <div className="container-fluid home p-0">
+        <div>
           <SearchBar />
         </div>
         <div id="carouselExampleCaptions" className="carousel slide">
@@ -79,7 +80,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="clothes"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h4>Clothes</h4>
               </div>
             </div>
@@ -89,7 +90,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="electronics"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h4>Electronics</h4>
               </div>
             </div>
@@ -99,7 +100,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="makeup"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h4>Makeup</h4>
               </div>
             </div>
@@ -109,7 +110,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="watches"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h4>Accessories</h4>
               </div>
             </div>
@@ -119,7 +120,7 @@ const Home = () => {
                 className="d-block w-100"
                 alt="jewelry"
               />
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption d-md-block">
                 <h4>Jewelries</h4>
               </div>
             </div>
@@ -152,6 +153,7 @@ const Home = () => {
 
         <div className="container-fluid ">
           <h2 className="text-center">Best Sellers</h2>
+
           <div className="products d-flex flex-wrap">
             {products?.map((prod) => (
               // console.log(prod.product_id);
@@ -168,28 +170,38 @@ const Home = () => {
                   <p className="card-text">
                     {prod.product_description.substring(0, 30)}
                   </p>
-
-                  <button
-                    onClick={() => navigate(`/product/${prod.product_slug}`)}
-                    className="my-btn"
-                  >
-                    More Details
-                  </button>
-                  <button
-                    className="my-btn"
-                    onClick={() => {
-                      setCart([...cart, prod]);
-                      localStorage.setItem(
-                        "cartItems",
-                        JSON.stringify([...cart, prod])
-                      );
-                      toast.success(
-                        `${prod.product_name} product added to cart`
-                      );
-                    }}
-                  >
-                    Add to Cart
-                  </button>
+                  <div className="col-lg-12">
+                    <div className="row">
+                      <div className="col-lg-6 col-6 align-items-center justify-content-center">
+                        <button
+                          onClick={() =>
+                            navigate(`/product/${prod.product_slug}`)
+                          }
+                          className="my-btn"
+                        >
+                          More Details
+                        </button>
+                      </div>
+                      <div className="col-lg-6 col-6 d-flex align-items-center justify-content-end">
+                        <div
+                          onClick={() => {
+                            setCart([...cart, prod]);
+                            localStorage.setItem(
+                              "cartItems",
+                              JSON.stringify([...cart, prod])
+                            );
+                            toast.success(
+                              `${prod.product_name} product added to cart`
+                            );
+                          }}
+                        >
+                          <button className="cart-btn">
+                            <FiShoppingCart />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

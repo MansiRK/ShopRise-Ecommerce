@@ -1,16 +1,15 @@
 .order .order-img {
-    background-size: cover;
-    /* margin-left: 20px; */
+  background-size: cover;
+  /* margin-left: 20px; */
 }
 
-
 .order .order-details .order-table {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .order .order-details .order-table th {
-    background-color: rgb(182, 182, 253);
-    border-bottom: 1px solid gray;
+  background-color: rgb(182, 182, 253);
+  border-bottom: 1px solid gray;
 }
 
 /* .order .order-details .order-table tbody tr:hover {
@@ -18,20 +17,26 @@
 } */
 
 .order .order-details .product {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* border: 1px solid gray; */
-    padding: 10px;
-    height: 50%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid gray; */
+  padding: 10px;
+  height: 50%;
 }
 
 .order .order-details .product .prod-img {
-    height: 40%;
-    width: 30%;
-    /* border: 1px solid gray; */
+  height: 40%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid gray; */
+}
+
+.prod-img img {
 }
 
 .order .order-details .product .prod-dtls {
-    /* border: 1px solid gray; */
+  /* border: 1px solid gray; */
 }

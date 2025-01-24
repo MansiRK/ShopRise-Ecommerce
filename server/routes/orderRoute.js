@@ -9,12 +9,7 @@ const route = express.Router();
 
 route.get("/buyer-order", authenticateUser, orderController.getOrdersByBuyer);
 
-route.get(
-  "/orders",
-  authenticateUser,
-  authenticateAdmin,
-  orderController.getAllOrders
-);
+route.get("/orders", orderController.getAllOrders);
 
 route.patch(
   "/order-status/:id",
