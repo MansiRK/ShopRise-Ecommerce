@@ -2,10 +2,11 @@
     "name": "shoprise",
     "version": "1.0.0",
     "engines": {
-      "node": "16.x"
+      "node": "18.x"
     },
     "main": "app.js",
     "scripts": {
+        "postinstall": "ls node_modules/react-scripts || echo 'react-scripts not installed'",
       "start": "nodemon app.js",
       "build": "react-scripts build",
       "test": "echo \"Error: no test specified\" && exit 1"
