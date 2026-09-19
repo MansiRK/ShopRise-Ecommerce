@@ -104,7 +104,7 @@ const register = (req, res) => {
 };
 
 // Login user
-const login = (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email) {
@@ -120,12 +120,17 @@ const login = (req, res) => {
 
   const findQuery = "SELECT * FROM users WHERE email = ?";
 
-  db.query(findQuery, [email], (error, result) => {
+  db.query(findQuery, [email], async (error, result) => {
+
+    
+
     if (error) {
       return res.status(500).json({
         message: `Failed to login user. ${error.message}`,
       });
     }
+
+    console.log("LOGIN RESULT:", result[0]);
 
     if (result.length === 0) {
       return res.status(404).json({
@@ -133,7 +138,7 @@ const login = (req, res) => {
       });
     }
 
-    const comparePassword = bcrypt.compare(password, result[0].password);
+    const comparePassword = await bcrypt.compare(password, result[0].password);
 
     if (!comparePassword) {
       return res.status(400).json({

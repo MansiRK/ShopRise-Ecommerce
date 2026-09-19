@@ -49,7 +49,7 @@ const createCategory = (req, res) => {
 };
 
 const getCategories = (req, res) => {
-  const fetchQuery = "SELECT * FROM category ORDER BY category_timestamp DESC";
+  const fetchQuery = "SELECT * FROM category ORDER BY created_at DESC";
 
   db.query(fetchQuery, (error, results) => {
     if (error) {

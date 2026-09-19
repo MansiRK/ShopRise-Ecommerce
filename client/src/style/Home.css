@@ -1,51 +1,64 @@
+:root {
+  --text-dark-blue: #04043e;
+  --text-white: white;
+  --text-gray: #3e3f45;
+  --bg-lighter-blue: #b6c8f05e;
+  --bg-black: #000000;
+  --light-gray: #F5F5F5;
+}
 /* Search bar */
 
-.search {
-  align-items: center;
-  justify-content: center;
-  margin: 20px 300px 20px 300px;
-}
-
-.search input {
+.search-bar input {
   align-items: center;
   outline: none;
   /* flex-direction: row; */
-  border: 0.5px solid gray;
-  border-radius: 50px;
+  border-radius: 4px;
   width: 100%;
   margin-right: 15px;
-  padding-left: 40px;
+  background-color: var(--light-gray);
+  padding: 7px 12px 7px 20px;
+  font-size: 12px;
 }
 
-.search input::placeholder {
-  text-align: center;
+.search-bar input::placeholder {
+  text-align: start;
 }
 
-.search button {
-  margin-right: 0;
-  align-items: right;
-  border-radius: 50px;
-  width: 100px;
+.banner-section{
+  padding: 60px 0;
 }
 
 /* Corousal */
 
-.home {
-  margin-top: 120px;
+.banner-section .categories-div{
+  border-right: 0.5px solid #e0e0e0;
+  height: 100%;
+  min-height: 360px;
+   margin-top: 6%;
 }
 
-.home .carousel {
-  height: 50%;
+.banner-div {
+  margin-top: 6%;
+  padding: 30px 0 0 40px;
 }
 
-.home .carousel-item img {
-  height: 75vh;
-  object-fit: cover !important;
-  width: 100%;
+.banner-section .category-div a{
+  display: block;
+  padding: 8px 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--bg-black)
 }
 
-.home .carousel-item h4 {
-  color: rgb(244, 230, 230);
+.banner-section .category-div a:hover {
+  color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.banner-div .banner-slide h4 {
+  color: var(--text-white);
   text-shadow: 2px 2px #3b3f3b;
   padding-bottom: 4px;
   font-size: 40px;
@@ -55,7 +68,235 @@
   margin-bottom: 0;
 }
 
+.banner-div .banner-slide{
+  background: var(--bg-black);
+  padding: 20px 0;
+  padding-left: 50px;
+}
+
+.banner-slide .banner-img-div img {
+  height: 325px;
+  object-fit: contain;
+  width: auto;
+}
+
+.banner-slide .banner-text-div{
+  padding: 20px 0;
+}
+
+.banner-slide .banner-text-div h1{
+  font-family: var(--font-Inter);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 60px;
+  text-align: start;
+}
+
+.banner-slide .banner-text-div .banner-btn{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  font-size: 18px;
+  color: var(--text-white);
+   padding: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.banner-slide .banner-text-div .banner-btn h5{
+border-bottom: 1px solid var(--text-white);
+  color: var(--text-white);
+margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+.banner-slide .banner-text-div .banner-btn svg{
+  font-size: 25px;
+  color: var(--text-white);
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color:var(--text-gray);
+  border: none;
+  align-items: center;
+  opacity: 1;
+}
+
+.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--main-color);
+  border: 2px solid var(--text-white);
+}
+
+
 /* Products */
+
+.products-section{
+    padding: 40px 0;
+}
+
+.flash-sale-div{
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sale-div{
+  display:flex;
+  align-items:center;
+  gap:60px;
+}
+
+.sale-timer-div{
+  display:flex;
+  align-items:end;
+  gap:20px;
+  margin-top: 10px;
+}
+
+.sale-timer-div .time-div{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sale-timer-div .time-div p{
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.sale-timer-div .time-div h4{
+  font-size: 32px;
+  line-height: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+margin-bottom: 0;
+}
+
+.sale-timer-div span{
+  color: var(--main-color);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.product-slide .product-card{
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-slide .product-card .product-img-div{
+  background-color: var(--light-gray);
+  height: 250px;
+  width: 270px;
+ position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.product-slide .product-card .product-img-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-slide .product-card .product-img-div .product-card-btn{
+  background-color: var(--text-white);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-slide .product-card .product-img-div .product-card-btn.wishlist-div{
+  top: 5%;
+}
+
+.product-slide .product-card .product-img-div .product-card-btn.view-div{
+  top: 25%;
+}
+
+.product-slide .product-card .product-img-div .product-card-btn svg{
+  font-size: 24px;
+}
+
+.product-slide .product-card .product-details-div{
+  padding-top: 10px;
+  z-index: 2;
+} 
+
+.product-slide .product-card .product-details-div h6{
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--bg-black);
+}
+
+.product-slide .product-card .product-details-div p{
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-color)
+}
+
+.product-card .cart-btn{
+  background-color: var(--bg-black);
+  color: var(--text-white);
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: -50px; /* hidden initially */
+  left: 0;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.product-card:hover .product-img-div .cart-btn{
+  bottom: 0;
+}
+
+.swiper-navigation{
+  display:flex;
+  gap:10px;
+
+  z-index:10;
+}
+
+.swiper-prev-btn,
+.swiper-next-btn{
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:none;
+  background:var(--light-gray);
+  color:var(--bg-black);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.swiper-prev-btn svg,
+.swiper-next-btn svg{
+  font-size:24px;
+}
 
 .products {
   border-top: 0.5px solid gray;

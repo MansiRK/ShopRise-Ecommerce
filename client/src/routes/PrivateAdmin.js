@@ -11,12 +11,14 @@ const PrivateAdmin = () => {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const res = await axios.get(`/auth/admin`);
-        // , {
-        //   headers: {
-        //     Authorization: auth?.accessToken,
-        //   },
-        // }
+        const res = await axios.get("/auth/admin", {
+  headers: {
+    Authorization: auth?.accessToken,
+  },
+});
+
+console.log("AUTH", auth);
+console.log("VALID", valid);
 
         if (res.data.valid) {
           setValid(true);

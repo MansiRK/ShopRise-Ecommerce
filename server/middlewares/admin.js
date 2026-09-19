@@ -31,9 +31,13 @@ const db = require("../database");
 
 const authenticateAdmin = (req, res, next) => {
   try {
+    console.log("USER FROM AUTH MIDDLEWARE:", req.user);
+
     const userId = req.user.user_id;
 
     const userQuery = "SELECT role FROM users WHERE user_id = ?";
+
+    console.log("USER ID:", userId);
 
     db.query(userQuery, [userId], (error, rows) => {
       if (error) {

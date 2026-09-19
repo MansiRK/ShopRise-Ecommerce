@@ -1,7 +1,5 @@
-.container{
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh;
+.register-div{
+    padding-top: 60px;
 }
 
 .container input{

@@ -42,8 +42,13 @@ const Register = () => {
 
   return (
     <Layout>
-      <>
-        <h2 className="text-center">Register Now</h2>
+      <div className="container-fluid register-div">
+        <div className="row align-items-center justify-content-center">
+          <div className="col-lg-6">
+            <img src="./images/register.png" />
+          </div>
+          <div className="col-lg-6">
+             <h2 className="text-center">Create an account</h2>
         <div className="form-container ">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -144,7 +149,10 @@ const Register = () => {
             </div>
           </form>
         </div>
-      </>
+          </div>
+        </div>
+       
+      </div>
     </Layout>
   );
 };
